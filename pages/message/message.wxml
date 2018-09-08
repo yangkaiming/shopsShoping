@@ -1,0 +1,24 @@
+<!--pages/message/message.wxml-->
+<view>
+  <view class='message'>
+    <view>消息</view>
+    <view>
+      <view>通讯录</view>
+      <view>＋</view>
+    </view>
+  </view>
+
+  <view class='messName'>
+    <view wx:for="{{messageList}}" wx:key="index">
+      <image src='{{item.img}}'></image>
+      <view>{{item.name}}</view>
+    </view>
+  </view>
+
+  <view class='messNull'>
+    <image src='../img/show.png'></image>
+    <view>这里还没有消息哦</view>
+
+  </view>
+
+</view>

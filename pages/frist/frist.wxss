@@ -1,0 +1,57 @@
+/* pages/frist/frist.wxss */
+
+.search {
+  width: 86%;
+  height: 60rpx;
+  display: flex;
+  background: gainsboro;
+  position: fixed;
+  top: 14rpx;
+  z-index: 1;
+  left: 70rpx;
+  border-radius: 50rpx;
+  opacity: 0.8;
+}
+
+.serachAll {
+  width: 100%;
+  height: 94rpx;
+  border-bottom: 1px solid gainsboro;
+}
+
+
+
+.fristTOP .item.active {
+  color: #ef4238;
+  background: white;
+}
+.fristFrist {
+  width: 25%;
+  background: ghostwhite;
+}
+
+.fristTOP>view {
+  font-size: 30rpx;
+  padding: 30rpx 0 30rpx 20rpx;
+}
+
+.changeGoods{
+  width: 100%;
+  display: flex;
+}
+.rightChange{
+  width: 74%;
+}
+.prictName{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 30rpx;
+}
+.prictName>view{
+  margin: 16rpx 4rpx;
+}
+.texts{
+  font-size: 34rpx;
+  margin: 20rpx 0 0 10rpx;
+}

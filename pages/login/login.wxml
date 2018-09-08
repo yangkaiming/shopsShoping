@@ -1,0 +1,65 @@
+<!--pages/login/login.wxml-->
+<view class='allBack'>
+  <view class='background'>
+    <image src='../img/1.jpg'></image>
+    <view wx:if="{{isLogins}}" class='yourName'>
+      <image src='../img/2.jpg'></image>
+      <view bindtap="login_btn">登陆/注册买多多账号</view>
+      <view>设置</view>
+    </view>
+    <view wx:else class='yourName'>
+      <image src='../img/me.jpg'></image>
+      <view >欢迎您：{{isLogin[0].nickName}}</view>
+      <view>设置</view>
+    </view>
+
+  </view>
+  <view class='myShop'>
+    <view class='myTop'>
+      <view>我的订单</view>
+      <view>查看更多订单 ></view>
+    </view>
+    <view>
+      <view wx:for="{{goodsList}}" wx:key="index">
+        <image src='{{item.img}}'></image>
+        <view>{{item.name}}</view>
+      </view>
+    </view>
+  </view>
+  <view class='mySet'>
+    <view class='myTop'>
+      <view>必备工具</view>
+      <view>查看全部工具 ></view>
+    </view>
+    <view>
+      <view class='setName' wx:for="{{setList}}" wx:key="index">
+        <image src='{{item.img}}'></image>
+        <view>{{item.name}}</view>
+      </view>
+    </view>
+  </view>
+
+  <view class='setGoodALL'>
+    <view class='setGoods'>
+      <view>
+        <image src='../img/30.png'></image>
+        <text>全部订单</text>
+      </view>
+      <view>></view>
+    </view>
+    <view class='setGoods'>
+      <view>
+        <image src='../img/shop1.png'></image>
+        <text>购物车</text>
+      </view>
+      <view>></view>
+    </view>
+  </view>
+
+  <view class='like'>
+    <view class='like1'>
+      <text style='color:gray;line-height:90rpx'>---</text>
+      <text style='color:gray;line-height:90rpx'>搜你喜欢 ---</text>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,175 @@
+<!--pages/goods/goods.wxml-->
+
+<!--index.wxml-->
+<view>
+  <view class='goodsFrist'>
+    <view class='goodsTOP'>
+      <text wx:for="{{goodsHot}}" data-id="{{index}}" class="item {{currentTab==index ? 'active' : ''}}" wx:key="unique" bindtap="navbarTap">{{item}}</text>
+    </view>
+  </view>
+
+  <view hidden="{{currentTab!==0}}" class='goods_all'>
+
+    <swiper class="slide-images" autoplay='true' indicator-dots='true' indicator-active-color="red" circular='true'>
+      <block wx:for="{{goodsImg}}" wx:key='index'>
+        <swiper-item>
+          <image src="{{ips+item}}" class="slide-image" mode="widthFix" />
+        </swiper-item>
+      </block>
+    </swiper>
+    <view wx:for="{{goodsList}}" wx:key="item._id" class='name'>
+      <view>
+        <view class='gprict'>现价:￥{{item.salePrice}}
+          <text style='font-size:24rpx;color:gray; text-decoration: line-through;'> 原价:￥{{item.price}}</text>
+        </view>
+      </view>
+      <view class='gname'>{{item.name}}</view>
+      <view class='gexpress'>
+        <view wx:if='{{data.express}}'>快递：免运费</view>
+        <view wx:else>快递：{{item.express}}</view>
+
+        <view>月销：{{item.monthSale}}</view>
+        <view>{{item.adress}}</view>
+      </view>
+      <view style='background:ghostwhite;width:100%;height:20rpx;'></view>
+      <view class='shopAct'>领卷</view>
+      <view style='background:ghostwhite;width:100%;height:20rpx;'></view>
+      <view class='shopPeople'>
+        <view>服务
+          <text>正品保证·公益宝贝·七天退款</text> </view>
+        <view>></view>
+      </view>
+      <view class='shopPeople' bindtap="norms_btn" data-status="open">
+        <view>规格
+          <text>选择颜色,规格</text> </view>
+        <view>></view>
+      </view>
+      <view class='shopPeople' bindtap="powerDrawer" data-statu="open">
+        <view>参数
+          <text>商品详细参数</text> </view>
+        <view>＞</view>
+      </view>
+
+
+      <view style='background:ghostwhite;width:100%;height:30rpx;'></view>
+      <view class='message'>
+        <view class='message1'>
+          <view>宝贝评论(1)</view>
+          <view bindtap='showAllMess' data-id='{{id}}'>查看全部 ></view>
+        </view>
+        <view class='message_name'>
+          <view>
+            <image src='../img/show.png'></image>
+            <text>t****i</text>
+          </view>
+          <view class='meaaName'>
+            哇，大爱呀！！！！！！之前一直想买一个鞋架，毕竟出门在外，这些小东西还是很有必要买的，看了很久，终于锁定这款，便宜实惠，关键是东西还好用好看结实，快递是非常非常的给力哇！
+          </view>
+
+        </view>
+      </view>
+      <view class='infoName'>
+        <text class='line'></text>已经到底了
+        <text class='line'></text>
+      </view>
+
+
+    </view>
+    <view class='all'>
+      <scroll-view scroll-y animation="{{animationData}}" class="drawer_attr_box" wx:if="{{showModalStatus}}">
+        <view class='paranNum'>产品参数</view>
+        <view wx:for="{{paramList}}" class='paranStr' wx:key="{{index}}">
+          <view>{{item}}</view>
+        </view>
+        <button bindtap="powerDrawer" data-statu="close" class="drawer_screen" wx:if="{{showModalStatus}}" type='warn'>完成</button>
+      </scroll-view>
+    </view>
+
+    <view class='all'>
+      <scroll-view scroll-y animation="{{animat}}" class="drawer_attr_box" wx:if="{{showModal}}">
+        <view class='paranNum'>产品规格</view>
+        <view class='index_imges'>
+          <image src='{{ips+goodsImg[0]}}'></image>
+          <view class='index_img2'>
+            <view>￥{{goodsList[0].salePrice}}</view>
+            <view>库存三件</view>
+            <view>地址：{{goodsList[0].adress}}</view>
+          </view>
+        </view>
+        <view wx:for="{{normsList}}" class='paranStr' wx:key="{{index}}">
+          <view>{{item.key}}</view>
+          <view class='normsName1'>
+            <view wx:for="{{item.value}}" wx:key="index">
+              <view class="normsName {{onChange==item ? 'actives' : ''}}" data-id="{{item}}" bindtap='namesAll'>{{item}}</view>
+            </view>
+          </view>
+        </view>
+        <view class='goodsNameBtn'>
+          <view>购买数量(限购5件)</view>
+          <view class='addBtnName'>
+            <image src='../img/1-.png' bindtap="delBtn"></image>
+            <view>{{goodsNum}}</view>
+            <image src='../img/1+.png' bindtap="addBtn"></image>
+          </view>
+        </view>
+        <button bindtap="norms_btn" bindtap="norms_btns" data-status="close" class="drawer_screen" wx:if="{{showModal}}" type='warn'>完成</button>
+      </scroll-view>
+    </view>
+
+
+    <view class='last_btn'>
+      <view>
+        <view>
+          <image src='../img/51.png' bindtap='shop_frists' data-id="{{shopId}}"></image>
+          <view class='goosName'>店铺</view>
+        </view>
+        <view>
+          <image src='../img/50.png' bindtap='messagePeople' data-id="{{id}}"></image>
+          <view class='goosName'>客服</view>
+        </view>
+        <view>
+          <image src='../img/52.png' bindtap='shop_three'></image>
+          <view class='goosName'>收藏</view>
+        </view>
+      </view>
+      <view class='last_name'>
+        <text bindtap="norms_btn" data-status="open">加入购物车</text>
+        <text bindtap="norms_btn" data-status="open">立即购买</text>
+      </view>
+    </view>
+
+
+
+  </view>
+
+  <!--详情-->
+  <view hidden="{{currentTab!==1}}" class='goods_all'>
+    <view class='infoName'>
+      <text class='line'></text> 商品介绍
+      <text class='line'></text>
+    </view>
+    <view wx:for="{{infoImgList}}" wx:key="index" style='width:100%'>
+      <image class='infoImg' src='{{ips+item}}' mode="widthFix"></image>
+    </view>
+  </view>
+  <!-- 推荐 -->
+  <view hidden="{{currentTab!==2}}" class='goods_all'>
+    <view class='hotShops'>
+      <view class='tody'>
+        <view wx:for="{{hotList}}" wx:key="index">
+          <image data-ids="{{item._id}}" bindtap="todyPrict" style='width:340rpx;height:280rpx;' src='{{ips+item.indexImg}}'></image>
+          <view class='goodsName'>
+            <view style='color:red'>￥{{item.price}}
+              <text class='info'>特价</text>
+            </view>
+            <view style='overflow:hidden;white-space:nowrap;width:360rpx;text-overflow:ellipsis;font-size:34rpx;font-weight:700;'>{{item.name}}</view>
+
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 返回顶部 -->
+  <image src='../img/12.png' class='goTop' hidden='{{!floorstatus}}' bindtap="goTopShop"></image>
+</view>

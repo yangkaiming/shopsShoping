@@ -1,0 +1,40 @@
+<view class='peopleFrist'>
+  <view class='frist'>
+    <image src='../img/left.png'></image>
+    <view class='seccend'>
+      <view bindtap='goback' data-id='{{shopId}}'> 进店</view>
+      <image class='images' src='../img/mess.png'></image>
+    </view>
+  </view>
+  <view class='meaas'>
+    <view wx:for="{{messsImg}}" wx:key="index">
+      <view>
+        <image src='{{ips+item.indexImg}}'></image>
+      </view>
+      <view>
+        <view class='message_name'>{{item.name}}</view>
+        <view class='message_prict'>￥{{item.salePrice}}</view>
+      </view>
+    </view>
+    <view class='meassName'>发送宝贝链接</view>
+  </view>
+
+  <scroll-view scroll-y class='messPeople'>
+    <view class='messPeople1'>
+      <view wx:for='{{people}}' wx:key="index" >
+        <view class='people_names'>{{item}}</view>
+      </view>
+    </view>
+  </scroll-view>
+
+
+  <view class='people'>
+
+    <image src='../img/62.png'></image>
+    <input auto-focus type='text' bindinput="bindKeyInput" confirm-type="send" value='{{clearValue}}' />
+    <image src='../img/61.png' bindtap="addbtn"></image>
+    <image style='width:80rpx;height:70rpx;' src='../img/60.png'></image>
+
+
+  </view>
+</view>

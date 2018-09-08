@@ -1,0 +1,60 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/frist/frist",
+    "pages/shop/shop",
+    "pages/login/login",
+    "pages/message/message",
+    "pages/search/search",
+    "pages/goods/goods",
+    "pages/mylogin/mylogin",
+    "pages/reg/reg",
+    "pages/goodShop/goodShop",
+    "pages/people/people",
+    "pages/messageShop/messageShop",
+    "pages/moneyNull/moneyNull"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#ed4014",
+    "navigationBarTitleText": "买多多",
+    "navigationBarTextStyle": "white",
+    "enablePullDownRefresh": "true"
+  },
+  "tabBar": {
+    "color": "black",
+    "selectedColor": "red",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "pages/img/frist.png",
+        "selectedIconPath": "pages/img/frist1.png"
+      },
+      {
+        "pagePath": "pages/frist/frist",
+        "text": "分类",
+        "iconPath": "pages/img/seore.png",
+        "selectedIconPath": "pages/img/seore1.png"
+      },
+      {
+        "pagePath": "pages/message/message",
+        "text": "消息",
+        "iconPath": "pages/img/message.png",
+        "selectedIconPath": "pages/img/message1.png"
+      },
+      {
+        "pagePath": "pages/shop/shop",
+        "text": "购物车",
+        "iconPath": "pages/img/shop.png",
+        "selectedIconPath": "pages/img/shop1.png"
+      },
+      {
+        "pagePath": "pages/login/login",
+        "text": "我的",
+        "iconPath": "pages/img/my.png",
+        "selectedIconPath": "pages/img/my1.png"
+      }
+    ]
+  }
+}

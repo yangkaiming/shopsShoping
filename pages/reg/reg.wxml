@@ -1,0 +1,18 @@
+<!--pages/reg/reg.wxml-->
+<form bindsubmit="refSubmit">
+  <view class="section">
+    <view>用户名：</view>
+    <input name="uname" placeholder="请输入账号" />
+  </view>
+  <view class="section">
+    <view>密码：</view>
+    <input name="pwd" placeholder="请输入密码" />
+  </view>
+  <view class="section">
+    <view>昵称：</view>
+    <input name="nickName" placeholder="请输入昵称" />
+  </view>
+  <view>
+    <button type='warn' formType="submit">注册</button>
+  </view>
+</form>

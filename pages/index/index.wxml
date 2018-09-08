@@ -1,0 +1,119 @@
+<!--index.wxml-->
+<view class='frist'>
+  <view class="search">
+    <icon  style='margin:10rpx 10rpx 0 30rpx;' size='20' type='search'></icon>
+    <input class=""  bindfocus='searchName' placeholder="手机" />
+  </view>
+  <swiper class="slide-image" autoplay='true' indicator-dots='true' indicator-active-color="white" circular='true'>
+    <block wx:for="{{imgUrls}}" wx:key='item.index'>
+      <swiper-item>
+        <image src="{{item}}" class="slide-image" />
+      </swiper-item>
+    </block>
+  </swiper>
+  <view class='fristImg'>
+    <view class='fristImg1' wx:for="{{fristImg}}" wx:key="item.index">
+      <image class='frist_img' src="{{item.img}}" />
+      <view>{{item.name}}</view>
+    </view>
+  </view>
+  <!-- 购物头条 -->
+  <view class='shopFrist'>
+    <view style='width:15%;height:26rpx'>
+      <image style='width:100%;height:30rpx' src='../img/jd-news.png'></image>
+    </view>
+    <view class='showUp'>
+      <swiper style='width:95%;height:140rpx;background: white; margin-left:10rpx;' interval="3000" duration="2000" vertical='true' autoplay='true' circular='true'>
+        <view>
+          <block wx:for="{{shopMessageImg}}" wx:key='item.index'>
+            <swiper-item class="gowarp" data-ids="{{item._id}}" bindtap="todyPrict">
+              <text class='info'>资讯</text>
+              <text style='font-size:22rpx;font-weight:700;width:70%'>
+                {{item.name}}
+              </text>
+              <image  class='shopImg' src="{{ips+item.img}}" />
+            </swiper-item>
+          </block>
+        </view>
+      </swiper>
+    </view>
+  </view>
+
+  <!-- 特价一天 -->
+  <view>
+    <view class='todyGoods'>
+      <view style='font-size:30rpx;font-weight:700;margin-left:16rpx;'>今日特价</view>
+      <view style='font-size:26rpx;color:gainsboro;margin-right:16rpx;'>查看更多></view>
+    </view>
+    <scroll-view class="scroll-view_H" scroll-x style="width: 100%">
+      <view wx:for="{{messageName}}" wx:key="item.index" class='new_top'>
+        <image style="width: 150rpx; height: 160rpx;border-radius:6rpx; " src="{{ips+item.img}}" data-ids="{{item._id}}"  bindtap="todyPrict" ></image>
+        <view class='remove_one'>￥{{item.nowPrict}}</view>
+        <view class='remove_two'>￥{{item.prict}}</view>
+      </view>
+    </scroll-view>
+  </view>
+  <!-- 今日秒杀 -->
+  <view class='time_goods'>
+    <view class='time'>
+      <view class='timeGoods'>
+        <view style='font-size:30rpx;font-weight:700;margin-left:16rpx;'>多多秒杀</view>
+        <text class='times'>秒杀剩余时间：</text>
+        <text style='color:orangered;font-size:28rpx;'>{{clock}} </text>
+      </view>
+      <view class='timeShop'>
+        <view wx:for="{{timeShop}}" wx:key="item.index">
+          <image data-ids="{{item._id}}" bindtap="todyPrict" style="width: 100rpx; height: 120rpx;border-radius:6rpx; " src="{{ips+item.img}}"></image>
+          <view class='remove_one'>￥{{item.nowPrict}}</view>
+          <view class='remove_two'>￥{{item.prict}}</view>
+        </view>
+      </view>
+    </view>
+    <view style='width:49%'>
+      <view class='timeGoods' style='font-size:36rpx;font-weight:700;margin-left:16rpx;color:blue;  text-align:center'>有好货</view>
+      <view style='color:gray;font-size:28rpx;margin-bottom:24rpx;text-align:center'>买家推荐</view>
+      <view class='timeShop'>
+        <view wx:for="{{goodGoods}}" wx:key="item.index">
+          <image  data-ids="{{item._id}}" bindtap="todyPrict" style="width:140rpx;height:160rpx; border-radius:6rpx;" src="{{ips+item.img}}"></image>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view style='background:gainsboro;width:100%;height:20rpx;'></view>
+  <!-- 热门店铺 -->
+  <view class='hotShops'>
+    <image style='width:800rpx;height:60rpx;' src='../img/tody.png'></image>
+    <view class='tody'>
+      <view wx:for="{{todyShops}}" wx:key="index">
+        <image data-id="{{item._id}}" bindtap="todyShops"  style='width:340rpx;height:280rpx;' src='{{ips+item.images}}'></image>
+        <view class='goodsName'>
+          <image style='width:70rpx;height:60rpx; border-radius:50%;' src='{{ips+item.img}}'></image>
+          <view style='overflow:hidden;white-space:nowrap;width:360rpx;text-overflow:ellipsis;font-size:34rpx;font-weight:700;'>{{item.name}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view style='background:gainsboro;width:100%;height:20rpx;'></view>
+
+  <!-- 猜你喜欢 -->
+  <view class='like'>
+    <view class='like1'>
+      <text style='color:red;line-height:90rpx'>---</text>
+      <icon style='margin-top:20rpx;' type="search" size="20" color='red' />
+      <text style='color:red;line-height:90rpx'>搜你喜欢 ---</text>
+    </view>
+  </view>
+
+
+
+
+
+
+
+
+
+
+  <!-- 返回顶部 -->
+  <image src='../img/12.png' class='goTop' hidden='{{!floorstatus}}' bindtap="goTop"></image>
+</view>

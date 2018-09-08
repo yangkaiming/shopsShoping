@@ -1,0 +1,92 @@
+<!--pages/shop/shop.wxml-->
+<view class='shopdAll'>
+  <view class='shops' wx:if='{{isLogin}}'>
+    <view class='shopImg'>
+      <image src='../img/shops.png'></image>
+    </view>
+    <view>
+      <view class='shopName'>登陆账号才能看到购物车哦</view>
+      <button class='shopBtn' type="default" size="mini" bindtap='goLogin'> 马上登陆 </button>
+    </view>
+  </view>
+  <view wx:else class='shopFor'>
+    <view wx:if="{{shopNull}}">
+      <view class='shopAllMal'>
+        <view>买多多自营</view>
+        <view>邮费已免</view>
+      </view>
+      <view wx:for="{{shopShop}}" wx:key="{{index}}" class='shop_image'>
+
+        <view>
+          <image src='{{ips+item.name[0].indexImg}}'></image>
+        </view>
+
+        <view>
+          <view class='delName' bindtap='delShops' data-id='{{item._id}}' data-ids='{{index}}'>删除</view>
+          <view class='shopFor_name'>{{item.name[0].name}}</view>
+          <view class='shopFor_prict'>
+            <text>￥</text> {{item.name[0].salePrice}}
+            <view class='addBtnName'>
+              <image src='../img/1-.png' bindtap="delBtn" data-id='{{index}}'></image>
+              <view>{{item.shopNum}}</view>
+              <image src='../img/1+.png' bindtap="addBtn" data-id='{{index}}'></image>
+            </view>
+
+          </view>
+        </view>
+
+      </view>
+    </view>
+    <view wx:else>
+      <view class='shopImges'>
+        <image src='../img/shops.png'></image>
+      </view>
+      <view class='shop_name_null'>你还没有选购商品！请先选择商品</view>
+    </view>
+    <view class='infoName'>
+      <text class='line'></text> 可能你想要
+      <text class='line'></text>
+    </view>
+    <!-- 推荐 -->
+    <view class='want'>
+      <view class='tuijian'>
+        <view class='hotShops'>
+          <view>
+            <view wx:for="{{hotList}}" wx:key="index" class='tody'>
+              <image data-ids="{{item._id}}" bindtap="your_want" style='width:340rpx;height:280rpx;' src='{{ips+item.indexImg}}'></image>
+              <view class='goodsName'>
+                <view style='width:300rpx;font-size:34rpx;'>{{item.name}}</view>
+                <view style='color:red'>￥{{item.price}}
+                  <text class='info'>特价</text>
+                </view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+
+
+    <view class='lastShop'>
+
+      <view>
+        <checkbox-group>
+          <checkbox value="全选" checked color='red' />全选
+        </checkbox-group>
+      </view>
+      <view class='lastShop1'>
+        <view>总价：
+          <text wx:if='{{num}}'> ￥{{allPrices}}</text>
+          <text wx:else> ￥ 0</text>
+        </view>
+        <view wx:if='{{num}}'  bindtap='goMoney' data-id='{{}}'>去结算({{goodsNum}})</view>
+        <view wx:else>去结算(0)</view>
+
+      </view>
+    </view>
+  </view>
+
+
+
+
+</view>

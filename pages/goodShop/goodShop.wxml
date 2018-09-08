@@ -1,0 +1,51 @@
+<!--pages/goodShop/goodShop.wxml-->
+<view>
+  <view style="background:url('{{ips+shopsList[0].backimg}}');background-size:100% 100%;margin-bottom:16rpx;">
+    <view wx:for="{{shopsList}}" wx:key="item._id" class='shopsFrist'>
+      <view class='shopLogo'>
+        <image src='{{ips+item.logo}}'></image>
+        <view class='shop1'>
+          <view>{{item.name}}</view>
+          <view>多多好店</view>
+        </view>
+        <view class='shop2'>
+          <image src='../img/53.png'></image>
+          <text>收藏</text>
+        </view>
+      </view>
+
+
+    </view>
+    <view>
+      <view class='goodsTOP'>
+        <text wx:for="{{shopFrist}}" data-id="{{index}}" class="item {{currentTab==index ? 'active' : ''}}" wx:key="unique" bindtap="shopFrist">{{item}}</text>
+      </view>
+    </view>
+
+  </view>
+
+  <view hidden="{{currentTab!==0}}">
+    <view class='infoName'>
+      <text class='line'></text> 店铺介绍
+      <text class='line'></text>
+    </view>
+    <view wx:for="{{shopsList[0].img}}" wx:key="item._id">
+      <image class='shopsImg' src='{{ips+item}}' mode='widthFix'></image>
+    </view>
+  </view>
+  <view hidden="{{currentTab!==1}}" class='shopTwo'>
+    <view class='shop_two'>
+      <view wx:for='{{goodList}}' wx:key="item._id" class='shop_names'>
+        <image data-id="{{item._id}}" bindtap="shop_down" src='{{ips+item.indexImg}}'></image>
+        <view class='shops_two1'>
+          <text class='shop_wuliu'>买多多物流</text> {{item.name}}</view>
+        <view class='shops_two2'>￥{{item.salePrice}}
+          <text>￥{{item.price}}</text> </view>
+      </view>
+    </view>
+  </view>
+  <view class='infoName'>
+    <text class='line'></text> 商品加载完毕
+    <text class='line'></text>
+  </view>
+</view>

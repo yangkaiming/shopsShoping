@@ -1,0 +1,92 @@
+<!--pages/frist/frist.wxml-->
+<view>
+  <!-- 搜索框 -->
+  <view class='serachAll'>
+    <view class="search">
+      <icon style='margin:10rpx 10rpx 0 160rpx;' size='20' type='search'></icon>
+      <input class="" bindfocus='searchName' placeholder="搜索买多多商品" />
+    </view>
+  </view>
+  <!-- 分类 -->
+  <view class='changeGoods'>
+    <view class='fristFrist'>
+      <view class='fristTOP'>
+        <view wx:for="{{fristHot}}" data-id="{{index}}" class="item {{currentTab==index ? 'active' : ''}}" wx:key="unique" bindtap="fristChange">{{item}}</view>
+      </view>
+    </view>
+
+    <view class='rightChange'>
+      <view hidden="{{currentTab!==0}}">
+        <view class='texts'>热销服装</view>
+        <view class='prictName'>
+          <view wx:for="{{grilList}}" wx:key="index">
+            <image data-ids="{{item._id}}" bindtap="todyPrict" style='width:240rpx;margin-right:16rpx;' src="{{ips+item.indexImg}}" mode="widthFix"></image>
+            <view style='overflow:hidden;white-space:nowrap;width:240rpx;text-overflow:ellipsis;font-size:30rpx;'>{{item.name}}</view>
+            <view style='font-size:26rpx;color:red'>￥{{item.salePrice}}</view>
+          </view>
+        </view>
+      </view>
+      <view hidden="{{currentTab!==1}}">
+        <view class='texts'>热销家具</view>
+        <view class='prictName'>
+          <view wx:for="{{goodsList}}" wx:key="index">
+            <image data-ids="{{item._id}}" bindtap="todyPrict" style='width:240rpx;margin-right:16rpx;' src="{{ips+item.indexImg}}" mode="widthFix"></image>
+            <view style='overflow:hidden;white-space:nowrap;width:240rpx;text-overflow:ellipsis;font-size:30rpx;'>{{item.name}}</view>
+            <view style='font-size:26rpx;color:red'>￥{{item.salePrice}}</view>
+          </view>
+        </view>
+      </view>
+      <view hidden="{{currentTab!==2}}">
+        <view class='texts'>热销化妆品</view>
+        <view class='prictName'>
+          <view wx:for="{{goodsList}}" wx:key="index">
+            <image data-ids="{{item._id}}" bindtap="todyPrict" style='width:240rpx;margin-right:16rpx;' src="{{ips+item.indexImg}}" mode="widthFix"></image>
+            <view style='overflow:hidden;white-space:nowrap;width:240rpx;text-overflow:ellipsis;font-size:30rpx;'>{{item.name}}</view>
+            <view style='font-size:26rpx;color:red'>￥{{item.salePrice}}</view>
+          </view>
+        </view>
+      </view>
+      <view hidden="{{currentTab!==3}}">
+        <view class='texts'>热销玩具</view>
+        <view class='prictName'>
+          <view wx:for="{{goodsList}}" wx:key="index">
+            <image data-ids="{{item._id}}" bindtap="todyPrict" style='width:240rpx;margin-right:16rpx;' src="{{ips+item.indexImg}}" mode="widthFix"></image>
+            <view style='overflow:hidden;white-space:nowrap;width:240rpx;text-overflow:ellipsis;font-size:30rpx;'>{{item.name}}</view>
+            <view style='font-size:26rpx;color:red'>￥{{item.salePrice}}</view>
+          </view>
+        </view>
+      </view>
+      <view hidden="{{currentTab!==4}}">
+        <view class='texts'>热销数码</view>
+        <view class='prictName'>
+          <view wx:for="{{goodsList}}" wx:key="index">
+            <image data-ids="{{item._id}}" bindtap="todyPrict" style='width:240rpx;margin-right:16rpx;' src="{{ips+item.indexImg}}" mode="widthFix"></image>
+            <view style='overflow:hidden;white-space:nowrap;width:240rpx;text-overflow:ellipsis;font-size:30rpx;'>{{item.name}}</view>
+            <view style='font-size:26rpx;color:red'>￥{{item.salePrice}}</view>
+          </view>
+        </view>
+      </view>
+      <view hidden="{{currentTab!==5}}">
+        <view class='texts'>热销美食</view>
+        <view class='prictName'>
+          <view wx:for="{{goodsList}}" wx:key="index">
+            <image data-ids="{{item._id}}" bindtap="todyPrict" style='width:240rpx;margin-right:16rpx;' src="{{ips+item.indexImg}}" mode="widthFix"></image>
+            <view style='overflow:hidden;white-space:nowrap;width:240rpx;text-overflow:ellipsis;font-size:30rpx;'>{{item.name}}</view>
+            <view style='font-size:26rpx;color:red'>￥{{item.salePrice}}</view>
+          </view>
+        </view>
+      </view>
+      <view hidden="{{currentTab!==6}}">
+        <view class='texts'>热销水果</view>
+        <view class='prictName'>
+          <view wx:for="{{goodsList}}" wx:key="index">
+            <image data-ids="{{item._id}}" bindtap="todyPrict" style='width:240rpx;margin-right:16rpx;' src="{{ips+item.indexImg}}" mode="widthFix"></image>
+            <view style='overflow:hidden;white-space:nowrap;width:240rpx;text-overflow:ellipsis;font-size:30rpx;'>{{item.name}}</view>
+            <view style='font-size:26rpx;color:red'>￥{{item.salePrice}}</view>
+          </view>
+        </view>
+      </view>
+
+    </view>
+  </view>
+</view>

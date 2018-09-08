@@ -1,0 +1,18 @@
+.section {
+  width: 100%;
+  display: flex;
+  border-bottom: 1px solid gainsboro;
+  height: 70rpx;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20rpx 10rpx;
+}
+
+.section>input {
+  width: 80%;
+}
+.refGo{
+  color: #ed4014;
+  font-size: 30rpx;
+  margin-top: 20rpx;
+}

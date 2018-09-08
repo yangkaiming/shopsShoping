@@ -1,0 +1,52 @@
+<!--pages/moneyNull/moneyNull.wxml-->
+<view class='all'>
+  <view wx:for='{{inforList}}' wx:key="index" class='pelpleAll'>
+    <image src='../img/adders.png'></image>
+    <view>
+      <view class='people'>
+        <view>收货人：{{item.nickName}}</view>
+        <view>{{item.phone}}</view>
+      </view>
+      <view class='peopleAderss'>收货地址：{{item.address}}</view>
+    </view>
+
+  </view>
+  <view style='background:#eee;width:100%;height:30rpx;'></view>
+  <view>
+    <view wx:for="{{peopleChan}}" wx:key="{{index}}">
+      <view class='mapPeo'>
+        <view>
+          <image src='{{ips+item.name[0].indexImg}}'></image>
+        </view>
+        <view>
+          <view class='shopFor_name'>{{item.name[0].name}}</view>
+          <view class='shopFor_prict'>
+            ￥ {{item.name[0].salePrice}}
+          </view>
+        </view>
+      </view>
+      <view class='shopPeople'>此商品性质不支持7天退货</view>
+      <view class='addresPeo'>
+        <view>配送方式</view>
+        <view>快递 {{item.name[0].express}} ></view>
+      </view>
+      <view class='addresPeo'>
+        <view> 匿名购买</view>
+        <checkbox value="匿名购买" checked color='orange' />
+      </view>
+      <view style='background:#eee;width:100%;height:30rpx;margin-bottom:40rpx;margin-top:40rpx;'></view>
+    </view>
+
+  </view>
+
+
+  <view class='lastShop'>
+    <view class='lastShop1'>
+      <view>合计：
+        <text> ￥{{allPrices}}</text>
+      </view>
+      <view bindtap='goMoney'>提交订单</view>
+    </view>
+  </view>
+
+</view>

@@ -1,0 +1,130 @@
+.meaas image {
+  width: 130rpx;
+  height: 140rpx;
+  margin: 0 20rpx;
+}
+
+.meaas {
+  width: 100%;
+  height: 250rpx;
+  margin-top: 40rpx;
+}
+
+.message_name {
+  font-size: 32rpx;
+  margin-right: 20rpx;
+  margin-bottom: 20rpx;
+}
+
+.message_prict {
+  color: red;
+  font-size: 32rpx;
+}
+
+.meaas>view {
+  display: flex;
+  align-items: center;
+}
+
+.meassName {
+  font-size: 30rpx;
+  color: red;
+  border: 1px solid orangered;
+  padding: 10rpx 20rpx;
+  border-radius: 30rpx;
+  width: 200rpx;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.frist image {
+  width: 50rpx;
+  height: 60rpx;
+  margin: 0 20rpx;
+}
+
+.frist {
+  width: 100%;
+  background: #eee;
+  display: flex;
+  justify-content: space-between;
+  height: 100rpx;
+  align-items: center;
+}
+
+.images {
+  margin-top: 16rpx;
+}
+
+.seccend>view:first-child {
+  color: white;
+  font-size: 32rpx;
+  background: linear-gradient(to right, orange, orangered);
+  padding: 8rpx 14rpx;
+  border-radius: 30rpx;
+  line-height: 50rpx;
+  margin-right: 20rpx;
+  height: 50rpx;
+}
+
+.seccend {
+  display: flex;
+  align-items: center;
+}
+
+.people image {
+  width: 70rpx;
+  height: 60rpx;
+  margin: 0 20rpx;
+}
+
+.people {
+  display: flex;
+  width: 100%;
+  height: 120rpx;
+  align-items: center;
+  border: 1px solid gainsboro;
+  position: absolute;
+  bottom: -120rpx;
+}
+
+.peopleFrist {
+  position: relative;
+}
+
+.messPeople {
+  width: 100%;
+  height: 678rpx;
+  background: #eee;
+}
+
+.people input {
+  border: 1px solid gainsboro;
+  border-radius: 40rpx;
+  height: 70rpx;
+  width: 72%;
+  padding: 0 0 0 40rpx;
+}
+
+.people_names {
+  font-size: 32rpx;
+  background: orange;
+  padding: 20rpx 30rpx;
+  margin-bottom: 80rpx;
+  width: auto;
+  border-radius: 20rpx;
+  text-align: center;
+  max-width: 60%;
+  
+}
+
+ .messPeople1 {
+  position: absolute;
+  top:40rpx;
+  right: 20rpx;
+  margin-bottom: 30rpx;
+  width: 60%;
+} 
+ .messPeople{
+  position: relative
+}  

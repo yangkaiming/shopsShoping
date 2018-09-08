@@ -1,0 +1,20 @@
+<!--pages/people/people.wxml-->
+<view>
+  <view class='firstAll'>
+    <view wx:for="{{people}}" wx:key="index">
+      <view class='people'>
+        <image src='{{item.head}}'></image>
+        <text>{{item.name}}</text>
+      </view>
+      <view class='people_mess'>
+        <view>{{item.meaasge}}</view>
+        <view>
+          <view wx:for="{{item.img}}" wx:key="index">
+            <image src='{{ips+item}}'></image>
+          </view>
+        </view>
+      </view>
+
+    </view>
+  </view>
+</view>

@@ -1,0 +1,160 @@
+.shopLogo>image {
+  width: 120rpx;
+  height: 120rpx;
+  margin-left: 16rpx;
+}
+
+.shopLogo {
+  width: 100%;
+  height: 200rpx;
+  display: flex;
+  align-items: center;
+}
+
+.shop1>view:first-child {
+  color: white;
+  font-size: 40rpx;
+  margin-bottom: 16rpx;
+}
+
+.shop1 {
+  margin-left: 20rpx;
+  margin-bottom: 16rpx;
+  width: 400rpx;
+}
+
+.shop1>view:last-child {
+  color: white;
+  font-size: 24rpx;
+  background: purple;
+  width: 100rpx;
+}
+
+.shop2>image {
+  width: 40rpx;
+  height: 40rpx;
+}
+
+.shop2>text {
+  color: white;
+  font-size: 30rpx;
+}
+
+.shop2 {
+  background: red;
+  border-radius: 30rpx;
+  padding: 8rpx 26rpx;
+  float: right;
+  margin-left: 4%;
+}
+
+.goodsTOP .item {
+  position: relative;
+}
+
+.goodsTOP .item.active {
+  color: white;
+}
+
+.goodsTOP .item.active:after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -10rpx;
+  left: 0;
+  right: 0;
+  height: 10rpx;
+  background: white;
+}
+
+.goodsTOP {
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  height: 100rpx;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.goodsTOP>text {
+  font-size: 36rpx;
+  font-weight: 700;
+  color: gainsboro;
+}
+
+.shopsImg {
+  width: 96%;
+  margin-left: 2%;
+}
+
+.infoName {
+  width: 100%;
+  margin: 24rpx 0;
+  text-align: center;
+  color: #999;
+  font-size: 34rpx;
+}
+
+.line {
+  display: inline-block;
+  width: 200rpx;
+  border-top: 0.01rem solid #999;
+  margin-bottom: 10rpx;
+}
+
+.shop_two {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.shopTwo {
+  background: #eee;
+}
+
+.shop_two image {
+  width: 350rpx;
+  height: 380rpx;
+}
+
+.shop_names {
+  width: 350rpx;
+  height: 540rpx;
+  background: white;
+  margin: 16rpx 0 16rpx 16rpx;
+}
+
+.shops_two1 {
+  width: 350rpx;
+  height: 90rpx;
+  background: white;
+  overflow: hidden;
+  white-space: wrap;
+  text-overflow: ellipsis;
+  font-size: 34rpx;
+  font-weight: 700;
+  margin-bottom: 16rpx;
+}
+
+.shops_two2 {
+  width: 350rpx;
+  background: white;
+  font-size: 30rpx;
+  color: red;
+}
+
+.shops_two2>text {
+  color: gray;
+  font-size: 24rpx;
+  text-decoration: line-through;
+  margin-left: 8rpx;
+}
+
+.shop_wuliu {
+  color: white;
+  background: red;
+  padding: 4rpx;
+  margin-right: 10rpx;
+  margin-left: 10rpx;
+  font-size: 26rpx;
+}

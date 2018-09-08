@@ -1,0 +1,245 @@
+/* pages/shop/shop.wxss */
+
+.shopdAll {
+  width: 100%;
+  height: auto;
+  background: gainsboro;
+}
+
+.shops {
+  width: 100%;
+  margin-left: 27%;
+  padding-top: 30%;
+  height: 856rpx;
+}
+
+.shopImg {
+  width: 360rpx;
+  height: 360rpx;
+  background: gray;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.shopImg>image {
+  width: 160rpx;
+  height: 160rpx;
+}
+
+.shopName {
+  font-size: 32rpx;
+  margin: 40rpx 0;
+}
+
+.shopBtn {
+  background: gainsboro;
+  margin-left: 80rpx;
+}
+
+/* 有用户 */
+
+.infoName {
+  width: 100%;
+  margin: 24rpx 0;
+  text-align: center;
+  color: #999;
+  font-size: 34rpx;
+}
+
+.line {
+  display: inline-block;
+  width: 200rpx;
+  border-top: 0.01rem solid #999;
+  margin-bottom: 10rpx;
+}
+
+.shopFor image {
+  width: 180rpx;
+  height: 190rpx;
+  margin: 0 30rpx;
+}
+
+.shopFor_name {
+  font-size: 30rpx;
+}
+
+.shopFor_prict {
+  font-size: 32rpx;
+  color: red;
+  margin-right: 20rpx;
+  margin-top: 20rpx;
+}
+
+.shopFor_prict>text {
+  font-size: 24rpx;
+  color: red;
+}
+
+.shopFor {
+  position: relative;
+}
+
+.shop_image {
+  width: 100%;
+  display: flex;
+  height: 340rpx;
+  align-items: center;
+  background: white;
+}
+
+.shopFor_prict {
+  display: flex;
+}
+
+.addBtnName>view {
+  width: 40rpx;
+  text-align: center;
+  font-size: 34rpx;
+  color: black;
+}
+
+.addBtnName image {
+  width: 50rpx;
+  height: 50rpx;
+  border: 1px solid gainsboro;
+}
+
+.addBtnName {
+  display: flex;
+  margin-left: 120rpx;
+}
+
+/* 推荐 */
+
+.tody {
+  width: 100%;
+  height: 300rpx;
+  display: flex;
+  flex-flow: wrap;
+  justify-content: space-around;
+}
+
+.goodsName {
+  width: 340rpx;
+  margin: 24rpx 0;
+  margin-top: 80rpx;
+}
+
+.hotShops {
+  width: 100%;
+  height: 1240rpx;
+}
+
+.info {
+  font-size: 22rpx;
+  color: white;
+  width: 80rpx;
+  height: 30rpx;
+  border-radius: 10rpx;
+  background: linear-gradient(to right, orange, orangered);
+  text-align: center;
+  margin-top: 46rpx;
+  margin-left: 16rpx;
+}
+
+.tuijian {
+  width: 100%;
+  height: auto;
+  background: white;
+}
+
+.shopAllMal {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  height: 80rpx;
+  border-bottom: 1px solid gainsboro;
+  align-items: center;
+  background: white;
+}
+
+.shopAllMal>view:first-child {
+  font-size: 34rpx;
+  margin-left: 60rpx;
+}
+
+.shopAllMal>view:last-child {
+  font-size: 26rpx;
+  margin-right: 20rpx;
+  color: gray;
+}
+
+.shop_name_null {
+  font-size: 32rpx;
+  text-align: center;
+}
+
+.shopImges {
+  width: 340rpx;
+  height: 340rpx;
+  background: grey;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.shopImges>image {
+  width: 140rpx;
+  height: 140rpx;
+}
+
+.lastShop {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background: white;
+  height: 100rpx;
+  align-items: center;
+  border: 1px solid gainsboro;
+  position: fixed;
+  bottom: 0;
+}
+
+.lastShop1 {
+  display: flex;
+  height: 100rpx;
+  align-items: center;
+}
+
+.lastShop1>view:first-child {
+  font-size: 28rpx;
+  margin-right: 20rpx;
+}
+
+.lastShop1 text {
+  color: red;
+  font-size: 28rpx;
+}
+
+.lastShop1>view:last-child {
+  color: white;
+  background: red;
+  padding: 20rpx 24rpx;
+}
+
+.want {
+  width: 100%;
+  height: 1800rpx;
+  margin-bottom: 110rpx;
+  background: white;
+}
+
+.delName {
+  font-size: 32rpx;
+  color: white;
+  background: red;
+  padding: 12rpx 20rpx;
+  border-radius: 20rpx;
+  width: 100rpx;
+  margin-left: 70%;
+  text-align: center;
+}

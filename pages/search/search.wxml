@@ -1,0 +1,22 @@
+<!--pages/search/search.wxml-->
+<view>
+  <view class='searchName'>
+    <view class="search">
+      <icon style='margin:10rpx 10rpx 0 30rpx;' size='20' type='search'></icon>
+      <input placeholder="手机"  bindblur="searchName" value="{{searchinput}}" />
+    </view>
+    <button type="warn" size="mini" style='color:white;background:#ed4014'>搜索</button>
+  </view>
+
+  <view>
+    <view class='lastName' wx:for="{{searchList}}" wx:key="item.index">
+      <view  data-ids="{{item._id}}"  bindtap="searchLast">{{item.name}}</view>
+      <text>↖</text>
+    </view>
+  </view>
+
+  <view>
+    <view style='font-size:32rpx;color:gray'>历史搜索</view>
+    <view class='hostName' wx:for="{{hostList}}" wx:key="index">{{item}}</view>
+  </view>
+</view>

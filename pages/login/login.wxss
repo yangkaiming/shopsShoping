@@ -1,0 +1,188 @@
+.background>image {
+  width: 100%;
+  height: 300rpx;
+}
+
+.background {
+  width: 100%;
+  height: 300rpx;
+  position: relative;
+}
+
+.yourName>image {
+  width: 180rpx;
+  height: 170rpx;
+  border-radius: 50%;
+}
+
+.yourName {
+  position: absolute;
+  top: 40rpx;
+  left: 80rpx;
+  display: flex;
+}
+
+.yourName>view:nth-child(2) {
+  height: 48rpx;
+  font-size: 32rpx;
+  margin-top: 70rpx;
+  margin-left: 30rpx;
+  color: white;
+  border: 1px solid white;
+  padding: 0rpx 20rpx;
+  border-radius: 20rpx;
+  width: 300rpx;
+  text-align: center;
+}
+
+.yourName>view:nth-child(3) {
+  font-size: 32rpx;
+  margin-left: 40rpx;
+  color: white;
+  font-weight: 700;
+}
+
+.myShop {
+  width: 94%;
+  height: 220rpx;
+  background: white;
+  margin: 0 auto;
+  border-radius: 20rpx;
+}
+
+.allBack {
+  background: #eee;
+}
+
+.myShop>view:first-child {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.myTop>view:first-child {
+  margin-left: 16rpx;
+  font-size: 32rpx;
+  margin: 16rpx 16rpx;
+  font-weight: 700;
+}
+
+.myTop>view:last-child {
+  margin-right: 36rpx;
+  font-size: 32rpx;
+  color: gray;
+  margin: 16rpx 16rpx;
+}
+
+.myShop {
+  position: absolute;
+  top: 270rpx;
+  left: 26rpx;
+}
+
+.myTop {
+  border-bottom: 1px solid gainsboro;
+}
+
+.myShop>view:last-child {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 16rpx;
+}
+
+.myShop>view:last-child image {
+  width: 70rpx;
+  height: 70rpx;
+}
+
+.myShop>view:last-child view {
+  font-size: 28rpx;
+  text-align: center;
+}
+
+.mySet {
+  width: 94%;
+  height: 400rpx;
+  background: white;
+  margin: 0rpx auto;
+  border-radius: 20rpx;
+  margin-top: 224rpx;
+}
+
+.mySet>view:first-child {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.mySet>view:last-child {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 16rpx;
+  flex-wrap: wrap;
+  align-items: center;
+  height: 270rpx;
+}
+
+.mySet>view:last-child  image {
+  width: 70rpx;
+  height: 70rpx;
+}
+
+.setName {
+  width: 17%;
+}
+
+.mySet>view:last-child view {
+  font-size: 28rpx;
+  text-align: center;
+}
+
+.setGoods {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid gainsboro;
+  align-items: center;
+  height: 80rpx;
+  
+}
+.setGoods>view:first-child{
+  display: flex;
+  align-items: center;
+}
+.setGoods>view:first-child image {
+  width: 70rpx;
+  height: 70rpx;
+  margin-right: 20rpx;
+  margin-left: 16rpx;
+}
+.setGoods>view:first-child text{
+  font-size: 30rpx;
+  
+}
+.setGoods>view:last-child{
+  margin-right: 16rpx;
+
+}
+.setGoodALL {
+  width: 94%;
+  background: white;
+  margin: 0 auto;
+  margin-top: 30rpx;
+  border-radius: 20rpx;
+}
+.like{
+  width: 100%;
+  height: 90rpx;
+}
+.like1{
+  width: 330rpx;
+  margin: 0 auto;
+}
+.like1>text{
+   margin: 0 0 0 28rpx; 
+  text-align: center;
+}
